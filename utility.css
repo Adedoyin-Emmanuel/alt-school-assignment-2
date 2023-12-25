@@ -71,8 +71,9 @@
 .required {
   color: red;
 }
+
 .overflow-x-hidden {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 .w-80 {

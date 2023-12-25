@@ -3,6 +3,16 @@
   src: url("/fonts/BrownLight\ Regular.ttf");
 }
 
+@font-face {
+  font-family: BrownFontBold;
+  src: url("/fonts/BrownExtraBold\ Regular.ttf");
+}
+
+@font-face {
+  font-family: SofiaPro;
+  src: url("/fonts/SofiaProLight.ttf");
+}
+
 html,
 body {
   font-family: BrownFont, "sans-serif";
@@ -12,7 +22,147 @@ body {
 }
 
 :root {
-  --app-bg-color: #2ec4b6;
+  --app-bg-color: #effbfa;
   --app-form-color: #ffffff;
   --app-button-color: #2ec4b6;
+}
+
+main {
+  background: var(--app-bg-color);
+}
+
+.app-logo {
+}
+.form-banner {
+  padding: 10px;
+}
+
+.heading {
+  font-family: BrownFontBold;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: -0.8px;
+}
+
+.sub-heading {
+  color: #737373;
+  font-family: BrownFont;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  width: 75%;
+}
+
+.form {
+}
+
+form {
+  padding: 20px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
+  overflow-x: hidden !important;
+}
+
+input,
+select {
+  width: 300px;
+  padding: 14px;
+  margin-top: 5px;
+  margin-right: 2rem;
+  margin-bottom: 1.3rem;
+  box-sizing: border-box;
+  border: 1px solid rgb(216, 219, 223);
+  outline: none;
+  transition: border-color 0.3s ease;
+
+  font-family: SofiaPro !important;
+}
+
+input:focus,
+select:focus {
+  border-color: #2ec4b6;
+}
+
+/* Customize select element */
+select {
+  appearance: none !important;
+  background-color: transparent !important;
+  text-transform: capitalize !important;
+}
+
+/* Customize select options */
+select option {
+  background-color: ghostwhite !important;
+  padding: 10px !important;
+  color: #333;
+  text-transform: capitalize !important;
+}
+
+label {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #011c34;
+  font-family: Sofia Pro !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.1px;
+}
+
+.form-section > input,
+.form-section > select {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+}
+
+a {
+  color: #2ec4b6;
+}
+.button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--app-button-color);
+  color: rgb(255, 255, 255);
+  font-family: Almarena, sans-serif;
+  display: flex;
+  border: none;
+  border-radius: 4px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+  font-family: SofiaPro !important;
+}
+
+.conditions > p {
+  font-family: SofiaPro !important;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column !important;
+  }
+
+  .form-group {
+    flex-direction: column !important;
+    align-items: start;
+    justify-content: start;
+    width: 100% !important;
+  }
+
+  .form-group > div > input,
+  select {
+    width: 464px !important;
+  }
 }
